@@ -1,0 +1,15 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+AnchorPane {
+	-fx-background-color:darkcyan; 
+}
+ComboBox {
+	-fx-font-family: "Lucida Console";
+	-fx-font-weight: bold;
+	-fx-color: mediumseagreen;
+}
+Label {
+	-fx-font-family: "Times New Roman";
+	-fx-font-weight: bold;
+	-fx-text-fill:rgb(0,255,255);
+}
