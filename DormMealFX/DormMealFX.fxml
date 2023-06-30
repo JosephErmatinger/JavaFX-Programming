@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DormMealFXController">
+   <children>
+      <Label layoutX="243.0" layoutY="14.0" text="DormMealFX">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="203.0" layoutY="40.0" text="By Joe Ermatinger &amp; Isaac Oxendale" />
+      <Label fx:id="todayDate" layoutX="180.0" layoutY="60.0" prefHeight="17.0" prefWidth="300.0" />
+      <ComboBox fx:id="comboBox2" layoutX="120.0" layoutY="175.0" onAction="#mealSelected" prefHeight="25.0" prefWidth="367.0" promptText="Choose your meal plan:" />
+      <ComboBox fx:id="comboBox1" layoutX="120.0" layoutY="105.0" onAction="#dormSelected" prefHeight="25.0" prefWidth="367.0" promptText="Choose your dormitory:" />
+      <Label fx:id="costOut" layoutX="126.0" layoutY="294.0" prefHeight="17.0" prefWidth="367.0" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

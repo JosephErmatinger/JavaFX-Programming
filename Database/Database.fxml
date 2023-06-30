@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DatabaseController">
+   <children>
+      <TextField fx:id="textfield1" alignment="CENTER" layoutX="14.0" layoutY="15.0" prefHeight="25.0" prefWidth="113.0" promptText="768" />
+      <TextField fx:id="textfield2" alignment="CENTER" layoutX="159.0" layoutY="16.0" prefHeight="25.0" prefWidth="126.0" promptText="https://google.com" />
+      <TextField fx:id="textfield3" alignment="CENTER" layoutX="315.0" layoutY="16.0" prefHeight="25.0" prefWidth="126.0" promptText="Monitored" />
+      <TextField fx:id="textfield4" alignment="CENTER" layoutX="460.0" layoutY="16.0" prefHeight="25.0" prefWidth="126.0" promptText="200 OK" />
+      <Label fx:id="label1" layoutX="53.0" layoutY="-1.0" text="URL ID" />
+      <Label fx:id="label2" layoutX="197.0" layoutY="-1.0" text="Page URL" />
+      <Label fx:id="label3" layoutX="349.0" layoutY="-1.0" text="Page Status" />
+      <Label fx:id="label4" layoutX="484.0" layoutY="-1.0" text="Response Code" />
+      <TableView fx:id="Tableview" editable="true" layoutY="87.0" prefHeight="313.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="UrlID" prefWidth="75.0" text="UrlID" />
+          <TableColumn fx:id="PageUrl" prefWidth="275.0" text="PageUrl" />
+            <TableColumn fx:id="PageStatus" prefWidth="117.0" text="PageStatus" />
+            <TableColumn fx:id="ResponseCode" prefWidth="132.0" text="ResponseCode" />
+        </columns>
+      </TableView>
+      <Button fx:id="Submit" layoutX="34.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#SubmitRecord" text="Submit" />
+      <Button fx:id="Clear" layoutX="140.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#Clear" prefHeight="25.0" prefWidth="54.0" text="Clear" />
+      <Button fx:id="Search" layoutX="88.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#Search" text="Search" />
+      <Separator layoutX="-2.0" layoutY="92.0" prefHeight="0.0" prefWidth="600.0" />
+      <ComboBox fx:id="searchComboBox" layoutX="378.0" layoutY="49.0" prefWidth="150.0" promptText="URL ID" visibleRowCount="4" />
+      <Button fx:id="Delete" layoutX="194.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#Delete" prefHeight="25.0" prefWidth="54.0" text="Delete" />
+      <Label fx:id="label5" layoutX="321.0" layoutY="53.0" text="Search By:" />
+   </children>
+</AnchorPane>
