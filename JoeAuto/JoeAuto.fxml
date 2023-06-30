@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.JoeAutoController">
+   <children>
+      <Label layoutX="271.0" layoutY="14.0" text="JoeAuto">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="205.0" layoutY="39.0" text="By Joe Ermatinger &amp; Isaac Oxendale" />
+      <Label fx:id="dateOut" layoutX="186.0" layoutY="56.0" prefHeight="17.0" prefWidth="300.0" />
+      <Label layoutX="100.0" layoutY="106.0" prefHeight="17.0" prefWidth="103.0" text="Standard Services">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Line endX="-1.0" endY="109.0" layoutX="302.0" layoutY="144.0" startX="-1.0" startY="-28.70709228515625" />
+      <Label layoutX="389.0" layoutY="106.0" prefHeight="17.0" prefWidth="103.0" text="Custom Service">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <VBox layoutX="35.0" layoutY="126.0" prefHeight="116.0" prefWidth="100.0">
+         <children>
+            <CheckBox fx:id="oilChange" mnemonicParsing="false" text="Oil Change">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="brakePads" mnemonicParsing="false" text="Brake Pads">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="brakeRotors" mnemonicParsing="false" text="Brake Rotors">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="tireRotation" mnemonicParsing="false" text="Tire Rotation">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="lubeJob" mnemonicParsing="false" prefWidth="85.0" text="Lube Job">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </CheckBox>
+         </children>
+      </VBox>
+      <VBox layoutX="144.0" layoutY="126.0" prefHeight="116.0" prefWidth="149.0">
+         <children>
+            <CheckBox fx:id="alignment" mnemonicParsing="false" text="Tire Alignment">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="radiatorFlush" mnemonicParsing="false" text="Radiator Flush">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="transFlush" mnemonicParsing="false" text="Transmission Flush">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="inspection" mnemonicParsing="false" text="Inspection">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </CheckBox>
+            <CheckBox fx:id="mufflerReplacement" mnemonicParsing="false" prefHeight="22.0" prefWidth="141.0" text="Muffler Replacement">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </CheckBox>
+         </children>
+      </VBox>
+      <Label layoutX="327.0" layoutY="135.0" text="Parts Cost:" />
+      <Label layoutX="327.0" layoutY="176.0" prefHeight="17.0" prefWidth="90.0" text="Hours of Labor:" />
+      <TextField fx:id="partsCost" layoutX="418.0" layoutY="131.0" />
+      <TextField fx:id="laborCost" layoutX="418.0" layoutY="172.0" />
+      <Button fx:id="calcButton" layoutX="256.0" layoutY="286.0" mnemonicParsing="false" onAction="#calculateCost" text="Calculate Cost" />
+      <Label fx:id="costOut" layoutX="249.0" layoutY="327.0" prefHeight="17.0" prefWidth="133.0" textAlignment="CENTER" />
+      <Button fx:id="clearButton" layoutX="272.0" layoutY="361.0" mnemonicParsing="false" onAction="#clearAll" text="Clear All" />
+   </children>
+</AnchorPane>
