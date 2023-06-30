@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="todayDate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NameFormatterController">
+   <children>
+      <Label layoutX="249.0" layoutY="2.0" text="NameFormatter">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="28.0" text="By Joe Ermatinger &amp; Isaac Oxendale" />
+      <Label fx:id="todayDate" layoutX="186.0" layoutY="48.0" prefHeight="17.0" prefWidth="300.0" />
+      <Label layoutX="35.0" layoutY="90.0" text="First Name:" />
+      <Label layoutX="35.0" layoutY="127.0" text="Middle Name:" />
+      <Label layoutX="36.0" layoutY="162.0" text="Last Name:" />
+      <Label layoutX="34.0" layoutY="197.0" text="Preferred Title:" />
+      <TextField fx:id="firstName" layoutX="121.0" layoutY="86.0" promptText="John" />
+      <TextField fx:id="middleName" layoutX="121.0" layoutY="123.0" promptText="Smith" />
+      <TextField fx:id="lastName" layoutX="121.0" layoutY="158.0" promptText="Doe" />
+      <VBox layoutX="438.0" layoutY="77.0" prefHeight="158.0" prefWidth="100.0">
+         <children>
+            <RadioButton id="radio1" fx:id="radio1" mnemonicParsing="false" onAction="#formatTFML" text="T F M L">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="FMLT" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton id="radio2" fx:id="radio2" mnemonicParsing="false" onAction="#formatFML" text="F M L" toggleGroup="$FMLT">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+            <RadioButton id="radio3" fx:id="radio3" mnemonicParsing="false" onAction="#formatFL" text="F L" toggleGroup="$FMLT">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+            <RadioButton id="radio4" fx:id="radio4" mnemonicParsing="false" onAction="#formatLFMT" text="L, F M, T" toggleGroup="$FMLT">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+            <RadioButton id="radio5" fx:id="radio5" mnemonicParsing="false" onAction="#formatLFM" text="L, F M" toggleGroup="$FMLT">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+            <RadioButton id="radio6" fx:id="radio6" mnemonicParsing="false" onAction="#formatLF" text="L. F" toggleGroup="$FMLT">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </VBox>
+      <VBox layoutX="320.0" layoutY="95.0" prefHeight="116.0" prefWidth="100.0">
+         <children>
+            <Label text="F = First Name" />
+            <Label text="M = Middle Name">
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </Label>
+            <Label text="L = Last Name">
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </Label>
+            <Label text="T = Preferred Title">
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+      <TextField fx:id="fmtdNamOut" layoutX="210.0" layoutY="294.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="239.0" layoutY="270.0" text="Copy formatted output:" />
+      <HBox layoutX="121.0" layoutY="223.0" prefHeight="17.0" prefWidth="100.0">
+         <children>
+            <RadioButton fx:id="RB1" mnemonicParsing="false" onAction="#displayMr">
+               <toggleGroup>
+                  <ToggleGroup fx:id="PrefTitle" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="RB2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#displayMrs" toggleGroup="$PrefTitle" />
+            <RadioButton fx:id="RB3" layoutX="31.0" layoutY="10.0" mnemonicParsing="false" onAction="#displayMs" toggleGroup="$PrefTitle" />
+            <RadioButton fx:id="RB4" layoutX="52.0" layoutY="10.0" mnemonicParsing="false" onAction="#displayDr" toggleGroup="$PrefTitle" />
+            <RadioButton fx:id="RB5" layoutX="73.0" layoutY="10.0" mnemonicParsing="false" onAction="#displayHon" toggleGroup="$PrefTitle" />
+         </children>
+      </HBox>
+      <Label fx:id="prefTitleOut" layoutX="121.0" layoutY="197.0" prefHeight="17.0" prefWidth="78.0" />
+   </children>
+</AnchorPane>
