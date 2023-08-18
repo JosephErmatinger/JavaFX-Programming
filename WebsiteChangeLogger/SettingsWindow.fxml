@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+
+<!-- SettingsWindow.fxml -->
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="295.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SettingsWindowController">
+   <center>
+      <Label fx:id="label" alignment="CENTER" prefHeight="30.0" prefWidth="128.0" text="Website Check Interval:" textAlignment="CENTER" textFill="#a80303" BorderPane.alignment="CENTER_LEFT">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Label>
+   </center>
+   <right>
+      <TextField fx:id="intervalTextField" prefHeight="25.0" prefWidth="164.0" promptText="1" text="1" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

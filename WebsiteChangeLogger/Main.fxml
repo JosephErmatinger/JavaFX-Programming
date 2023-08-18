@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane layoutX="127.0" layoutY="90.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Website Watcher">
+               <content>
+                  <fx:include fx:id="websiteWatcherTab" source="WebsiteChangeLogger.fxml" />
+               </content>
+          </Tab>
+          <Tab text="Browser">
+               <content>
+                  <fx:include fx:id="webBrowserTab" source="WebBrowser.fxml" />
+               </content>
+          </Tab>
+          <Tab text="Protected Websites">
+               <content>
+                  <fx:include fx:id="protectedWebsitesTab" source="ProtectedWebsites.fxml" />
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
