@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <GridPane alignment="CENTER" hgap="10.0" layoutX="68.0" layoutY="400.0" prefHeight="166.0" prefWidth="677.0" vgap="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="339.0" text="Email:" textAlignment="RIGHT" textFill="#1457ae">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="17.58" radius="20.8675" width="67.89">
+                     <color>
+                        <Color red="0.184271439909935" green="0.5079191327095032" blue="0.7236841917037964" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="339.0" text="Password:" textAlignment="CENTER" textFill="#1457ae" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="17.58" radius="20.8675" width="67.89">
+                     <color>
+                        <Color red="0.184271439909935" green="0.5079191327095032" blue="0.7236841917037964" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <TextField fx:id="emailField" prefHeight="57.0" prefWidth="338.0" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect></TextField>
+            <PasswordField fx:id="passwordField" prefHeight="56.0" prefWidth="338.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect></PasswordField>
+            <Button mnemonicParsing="false" onAction="#signupButtonClicked" prefHeight="61.0" prefWidth="347.0" text="Sign Up" textFill="#321e79" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="101.0" prefWidth="455.0" text="Log In" textFill="#321e79" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </GridPane>
+      <ImageView fx:id="imageview" fitHeight="269.0" fitWidth="411.0" layoutX="202.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@javascript.png" />
+         </image>
+         <effect>
+            <DropShadow height="56.17" radius="27.585" width="56.17">
+               <color>
+                  <Color red="0.17836257815361023" green="0.5321149826049805" blue="0.8026315569877625" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Label layoutX="289.0" layoutY="12.0" text="Log In!" textFill="#1457ae">
+         <font>
+            <Font name="System Bold" size="72.0" />
+         </font>
+         <effect>
+            <InnerShadow choke="0.59" height="41.51" radius="12.195" width="9.27" />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>
