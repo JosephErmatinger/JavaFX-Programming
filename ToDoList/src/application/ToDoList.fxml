@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="186.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ToDoListController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNewNote" prefHeight="26.0" prefWidth="196.0" text="New Note" />
+            <TextField fx:id="searchField" promptText="Search" />
+            <ListView fx:id="noteListView" prefHeight="355.0" prefWidth="186.0" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
