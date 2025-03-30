@@ -1,0 +1,16 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.table-view {
+    -fx-background-color: #f0f0f0; /* Background color of the TableView */
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #333333; /* Text color of the cells */
+}
+
+.table-view .table-row {
+    -fx-background-color: transparent; /* Default background color for rows */
+}
+
+.table-view .table-row:hover {
+    -fx-background-color: #e0e0e0; /* Background color on hover */
+}

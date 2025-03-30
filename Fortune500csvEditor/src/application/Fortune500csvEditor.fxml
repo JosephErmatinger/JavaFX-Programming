@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Fortune500csvEditorController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="openCsvFile" mnemonicParsing="false" onAction="#openCSV" text="Open CSV File" />
+                  <MenuItem mnemonicParsing="false" text="Search" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveCSV" text="Save" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="csvTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+        <TableColumn fx:id="rankColumn" text="Rank" />
+        <TableColumn fx:id="titleColumn" text="Title" />
+        <TableColumn fx:id="websiteColumn" text="Website" />
+        <TableColumn fx:id="employeesColumn" text="Employees" />
+        <TableColumn fx:id="sectorColumn" text="Sector" />
+        <TableColumn fx:id="industryColumn" text="Industry" />
+        <TableColumn fx:id="hqlocationColumn" text="Hq Location" />
+        <TableColumn fx:id="hqaddrColumn" text="Hq Address" />
+        <TableColumn fx:id="hqcityColumn" text="Hq City" />
+        <TableColumn fx:id="hqstateColumn" text="Hq State" />
+        <TableColumn fx:id="hqzipColumn" text="Hq Zip" />
+        <TableColumn fx:id="hqtelColumn" text="Hq Tel" />
+        <TableColumn fx:id="ceoColumn" text="CEO" />
+        <TableColumn fx:id="ceoTitleColumn" text="CEO Title" />
+        <TableColumn fx:id="addressColumn" text="Address" />
+        <TableColumn fx:id="tickerColumn" text="Ticker" />
+        <TableColumn fx:id="fullnameColumn" text="Fullname" />
+        <TableColumn fx:id="revenuesColumn" text="Revenues" />
+        <TableColumn fx:id="revchangeColumn" text="Revchange" />
+        <TableColumn fx:id="profitsColumn" text="Profits" />
+        <TableColumn fx:id="prftchangeColumn" text="Prftchange" />
+        <TableColumn fx:id="assetsColumn" text="Assets" />
+        <TableColumn fx:id="totshequityColumn" text="Totshequity" />
+    	</columns>
+      </TableView>
+   </center>
+</BorderPane>
